@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Mutethia Creatives</div>
+      <div class="logo" ><img src="./assets/MutethiaCreates.svg" alt="Mutethia Creates" /></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -42,7 +42,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I am</p>
         <h1 class="title">Rhema Mutethia</h1>
-        <p class="section__text__p2">Software Developer, Learning Data Science</p> 
+        <p class="section__text__p2">Software Developer </p> 
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -173,8 +173,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
+                  <h3>BootStrap</h3>
+                  <p>Basic</p>
                 </div>
               </article>
               <article>
@@ -188,32 +188,10 @@
                   <p>Basic</p>
                 </div>
               </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -222,18 +200,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
+                  <h3>Flask</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -244,7 +211,18 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Express JS</h3>
+                  <h3>Django</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -259,6 +237,30 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Rest API</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+             
             </div>
           </div>
         </div>
@@ -293,7 +295,7 @@
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/rhema254/musicians-connect'"
               >
                 Live Demo
               </button>
@@ -307,7 +309,7 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Double A Properties</h2>
+            <h2 class="experience-sub-title project-title">Waitlist With Mpesa</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -326,25 +328,20 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
-                alt="Project 3"
+                src="./assets/ComingSoon.svg"
+                alt="Project "
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Ticketting System</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+             
               >
-                Github
+                Coming Soon
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+              
             </div>
           </div>
         </div>
@@ -392,5 +389,21 @@
       <p>Copyright &#169; 2024 FRhema Mutethia. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+      window.addEventListener('load', adjustLogoSize);
+      window.addEventListener('resize', adjustLogoSize);
+  
+      function adjustLogoSize() {
+        const navbar = document.getElementById('desktop-nav');
+        const logoImg = document.querySelector('.logo img');
+  
+        if (navbar && logoImg) {
+          const navbarHeight = navbar.clientHeight;
+          logoImg.style.maxHeight = `${navbarHeight}vh`;
+        }
+      }
+    </script>
+  
+
   </body>
 </html>
