@@ -293,12 +293,17 @@ section {
 .about-details-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   gap: 10%;
+  align-items: center;
+  
 }
 .about-containers{
     display: flex;
     width: 90%;
+    height: fit-content;
+    justify-items: center;
+    
 }
 
 .about-pic {
