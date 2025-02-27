@@ -4,30 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="main.css" />
+    <title>Welcome to Rhema's Portfolio</title>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+     <style>
+      body{
+        font-family: "Poppins", sans-serif;
+      }
+      .open{
+        span:first-child{
+          transform: rotate(45deg) translate(10px, 5px);
+        }
+        span:nth-child(2){
+          opacity: 0;
+        }
+        span:last-child {
+          transform:rotate(-45deg) translate(10px, -5px);
+        }
+        span {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+}
+      }
+      
+     </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo" ><img src="./assets/MutethiaCreates.svg" alt="Mutethia Creates" /></div>
+  <body class="bg-white">
+   
+    <nav id="desktop-nav" class="hidden lg:flex bg-white flex-row justify-around items-center h-32 w-[100%]">
+      <div class="logo" ><img src="./assets/MutethiaCreates.svg" alt="Mutethia Creates" class="w-[60%]"/></div>
       <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-links flex  space-x-20">
+          <li><a href="#about" class="text-2xl  hover:text-[#e23e21b3] hover:underline hover:decoration-[#c4431ce6] hover:underline-offset-[1rem]">About</a></li>
+          <li><a href="#experience" class="text-2xl  hover:text-[#e23e21b3] hover:underline hover:decoration-[#c4431ce6] hover:underline-offset-[1rem]">Experience</a></li>
+          <li><a href="#projects" class="text-2xl  hover:text-[#e23e21b3] hover:underline hover:decoration-[#c4431ce6] hover:underline-offset-[1rem]">Projects</a></li>
+          <li><a href="#contact" class="text-2xl  hover:text-[#e23e21b3] hover:underline hover:decoration-[#c4431ce6] hover:underline-offset-[1rem]">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Rhema Mutethia</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
+   
+    <nav id="hamburger-nav" class="  lg:hidden grid grid-cols-3 center items-start h-[17vh]" >
+      <div class="logo w-2/4 relative h-full  p-2 "  ><img src="./assets/MutethiaCreates.svg" alt="Mutethia Creates" class=" "/></div>
+      <div class="hamburger-menu bg-amber-950 col">
+          <div id="hamburger-icon" class="hamburger-icon gap-2" onclick="toggleMenu()">
+            <span class="bg-black w-1/4 h-[2px]" ></span>
+            <span class="bg-black w-1/4 h-[2px]"></span>
+            <span class="bg-black w-1/4 h-[2px]"></span>
+          </div>
+
+        <div id="menu-links" class="absolute hidden bg-white mt-1 p-4 list-none right-4 w-5/12 text-2xl space-y-3 ">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -35,48 +60,46 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="My profile picture" style="border-radius: 2rem;"/>
+    
+    
+    <section id="profile" class=" h-fit  grid grid-rows  justify-items-center justify-center  md:grid-cols-2  ">
+      <div class="section__pic-container h-fit flex justify-center items-center pt-10">
+        <img src="./assets/rhema_image.jpg" alt="My profile picture" class="rounded-4xl w-[40%] h-[20%] object-contain " />
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I am</p>
-        <h1 class="title">Rhema Mutethia</h1>
-        <p class="section__text__p2">Software Developer </p> 
-        <div class="btn-container">
+      <div class="section__text pt-8">
+        <p class="section__text__p1 text-[#555555] text-[20px] text-center font-semibold">Hello, I am</p>
+        <h1 class="title text-[32px] font-bold text-center">Rhema Mutethia</h1>
+        <p class="section__text__p2  text-[#555555] text-[20px] text-center font-semibold">Software Developer </p> 
+
+        <div class="btn-container  flex flex-row justify-center pt-8 space-x-8 ">
           <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Rhema Mutethia - Resume.pdf')"
+            class="btn btn-color-2 text-sm bg-white border-2 p-[16px] rounded-4xl font-semibold"
+            onclick="window.open('./assets/RHEMA MUTETHIA - Resume.pdf')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1 text-sm bg-black text-white p-[16px] border-1 rounded-4xl font-semibold" onclick="location.href='./#contact'">
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/rhema-mutethia-430723209'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/rhema254'"
-          />
+        
+        <div id="socials-container" class="pt-8 flex justify-center space-x-6">
+        
+          <a href="https://linkedin.com/in/rhemamutethia"><i class="fa-brands fa-github text-4xl "></i></a>
+          <a href="https://github.com/rhema254"><i class="fa-brands fa-linkedin text-4xl text-[#0a66c2]"></i></a>
+         
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+   
+   
+    <section id="about" class="flex flex-col relative justify-center items-center">
+      <p class="section__text__p1 text-[#555555] text-[16px] font-regular">Get To Know More</p>
+      <h1 class="title text-[32px] font-bold">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/about-pic.png"
+            src="./assets/rhema_image.jpg"
             alt="Profile picture"
             class="about-pic"
           />
@@ -173,8 +196,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>BootStrap</h3>
-                  <p>Basic</p>
+                  <h3>Bootstrap</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -190,14 +213,25 @@
               </article>
              
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>Shadcn</h3>
+                  <h3>Tailwind </h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <h3>Shadcn UI</h3>
                   <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <h3>React</h3>
+                  <p>Basic</p>
                 </div>
               </article>
              
@@ -218,56 +252,51 @@
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
                   <h3>Django</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
                   <h3>Java</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
                   <h3>Git</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
                   <h3>MySQL</h3>
                   <p>Experienced</p>
                 </div>
               </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
               
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
                   <h3>Rest API</h3>
                   <p>Intermediate</p>
@@ -278,12 +307,7 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -292,20 +316,13 @@
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/MusiciansConnect.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/MusiciansConnect.png" alt="Project 1" class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">Musicians Connect</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
+              <button class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/rhema254/_MusiciansConnect '"
-              >
-                Github
-              </button>
+              >Github</button>
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://musiciansconnect-7f13a228269e.herokuapp.com'"
@@ -340,32 +357,19 @@
           </div>
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/ComingSoon.svg"
-                alt="Project "
-                class="project-img"
-              />
+              <img src="./assets/ComingSoon.svg" alt="Project "class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Ticketting System</h2>
+            <h2 class="experience-sub-title project-title">Movie-Rec!</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-             
-              >
-                Coming Soon
-              </button>
-              
+              <button class="btn btn-color-2 project-btn">Coming Soon</button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
     </section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
