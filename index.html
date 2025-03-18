@@ -1,17 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo" ><img src="./assets/MutethiaCreates.svg" alt="Mutethia Creates" /></div>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio Website</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .no-click {
+      cursor: not-allowed;
+      border: rgb(53, 53, 53) 0.1rem solid;
+      /* pointer-events: none; */
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo"><img src="./assets/MutethiaCreates.svg" alt="Mutethia Creates" /></div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Rhema Mutethia</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/Rhema_Mutethia.jpg" alt="My profile picture" style="border-radius: 2rem;" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I am</p>
+      <h1 class="title">Rhema Mutethia</h1>
+      <p class="section__text__p2">Software Developer </p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Rhema Mutethia - Resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://linkedin.com/in/rhema-mutethia'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/rhema254'" />
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="">
+
+    <div class="about-title flex flex-col justify-center  space-y-4">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+    </div>
+
+    <div class="section-container grid grid-cols-2">
+     
+      <div class="section__pic-container col-span-1">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+
+      <div class="about-details-container">
+
+        <div class="grid grid-cols-3 justify-center place-items-center gap-2 h-full ">
+
+          <div class=" bg-white rounded-2xl col-span-1 text-[16px] grid px-1 gap-2 border-[.75px] border-gray-700 w-full h-full">
+            <div class="flex flex-col justify-center items-center   ">
+              <i class="fas fa-laptop-code text-2xl "></i>
+              <h3 class="text-center font-semibold">Experience</h3>
+            </div>
+            <div class="flex flex-col ">
+              <p class="text-center">1+ years <br />Software Development</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl col-span-1 text-[16px] grid px-1 gap-2 border-[.75px] border-gray-700 w-full h-full">
+            <div class="flex flex-col justify-center items-center ">
+              <i class="fas fa-certificate text-2xl"></i>
+              <h3 class="text-center font-semibold">Certifications</h3>
+            </div>
+            <div class="flex flex-col ">
+              <div class="text-center flex flex-col justify-center items-center">
+                <img src="assets/aws_badge.avif" alt="" class="justify-center" width="20%">
+                <p>Cloud Practitioner Essentials</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl col-span-1 text-[16px] grid px-1 gap-2 border-[.75px] border-gray-700 w-full h-full">
+            <div class="flex flex-col justify-center items-center ">
+              <i class="fa-solid fa-book-open-reader text-2xl"></i>
+              <h3 class="text-center font-semibold">Interests</h3>
+            </div>
+
+            <div class="flex flex-col ">
+              <p class="text-center">Software Development <i class="fas fa-code"></i><br />Cloud Computing <i class="fa-solid fa-cloud"></i><br />Machine Learning <i class='bx bx-network-chart'></i></p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl col-span-3 text-[16px] grid px-1 gap-2 border-[.75px] border-gray-700 w-full h-full">
+            <div class="flex flex-col justify-center items-center ">
+              <i class="fa-solid fa-user-graduate text-2xl"></i>   
+              <h3 class="text-center font-semibold">Education</h3>
+            </div>
+
+            <div class="flex flex-col ">
+              <p class="text-center">BSc. Computer Science<br />Kenyatta University <br /> 2020 - 2024</p>
+            </div>
+          </div>
+
+        </div>
+      
+      </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+
+
+
+
+  <section id="experience">
+    <div class="experience-title">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+  </div>
+
+    <div class="">
+      <div class=" grid grid-cols-2 gap-12 ">
+        
+        <div class="border-[rgb(53,53,53)] border-[0.1rem] rounded-2xl flex flex-col px-8">
+              <div class="mb-8">
+                  <h2 class="text-[#555555] text-[28px] font-bold text-center">Frontend Development</h2>
+              </div>
+              <div class="grid grid-cols-2 text-start gap-8 ">
+
+                <article class="grid grid-cols-2 ">
+                    <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+                   
+                    <div class="flex flex-col  ">
+                      <h3>HTML</h3>
+                      <p>Experienced</p>
+                    </div>
+
+                  </article>
+                <article class="grid grid-cols-2">
+                    <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+                   
+                    <div class="flex flex-col justify-start text-start ">
+                      <h3>CSS</h3>
+                      <p>Experienced</p>
+                    </div>
+
+                  </article>
+                <article class="grid grid-cols-2">
+                    <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+                   
+                    <div class="flex flex-col justify-start text-start ">
+                      <h3>TailwindCSS</h3>
+                      <p>Experienced</p>
+                    </div>
+
+                  </article>
+                <article class="grid grid-cols-2">
+                    <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+                   
+                    <div class="flex flex-col justify-start text-start ">
+                      <h2>JavaScript</h2>
+                      <p>Intermediate</p>
+                    </div>
+
+                  </article>
+                <article class="grid grid-cols-2 col-span-1">
+                    <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+                   
+                    <div class="flex flex-col justify-start text-start ">
+                      <h3>React</h3>
+                      <p>Intermediate</p>
+                    </div>
+
+                  </article>
+               
+
+              </div>
+        </div>
+
+        <div class="border-[rgb(53,53,53)] border-[0.1rem] rounded-2xl flex flex-col px-8">
+          <div class="mb-8">
+              <h2 class="text-[#555555] text-[28px] font-bold text-center">Backend Development</h2>
+          </div>
+          <div class="grid grid-cols-2 text-start gap-8 ">
+
+            <article class="grid grid-cols-2">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>Flask</h3>
+                  <p>Intermediate</p>
+                </div>
+
+              </article>
+            <article class="grid grid-cols-2">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>Django</h3>
+                  <p>Intermediate</p>
+                </div>
+
+              </article>
+           
+            <article class="grid grid-cols-2">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h2>JavaScript</h2>
+                  <p>Intermediate</p>
+                </div>
+
+              </article>
+            <article class="grid grid-cols-2 col-span-1">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+
+              </article>
+              <article class="grid grid-cols-2 col-span-1">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>MySQL</h3>
+                  <p>Experienced</p>
+                </div>
+
+              </article>
+              <article class="grid grid-cols-2 col-span-1">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>PostgreSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+
+              </article>
+              <article class="grid grid-cols-2 col-span-1">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+
+              </article>
+              <article class="grid grid-cols-2 col-span-1">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="h-[32px]" />
+               
+                <div class="flex flex-col justify-start text-start ">
+                  <h3>REST API</h3>
+                  <p>Intermediate</p>
+                </div>
+
+              </article>
+           
+
+          </div>
+    </div>
+
+      
+
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Sifafx_image.png" alt="Project 0" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">SifaFX</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/rhema254/Flask_Si '">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://flask-si.onrender.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/MusiciansConnect.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Musicians Connect</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/rhema254/_MusiciansConnect '">
+              Github
+            </button>
+            <button class="btn project-btn no-click btn-color-3"
+              onclick="location.href='https://musiciansconnect-7f13a228269e.herokuapp.com'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/ComingSoon.svg" alt="Project " class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Harvest-Hub</h2>
+          <div class="btn-container">
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/rhema254/HarvestHub/tree/Rhema'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/rhema254/HarvestHub/tree/Rhema'">
+                Live Demo
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Codility_Readme.png" alt="Project " class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Codility-Challenges</h2>
+          <div class="btn-container">
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Codility-Challenges'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Codility-Challenges'">
+                Live Demo
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Movie_Rec.png" alt="Project " class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Movie Rev</h2>
+          <div class="btn-container">
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Codility-Challenges'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Codility-Challenges'">
+                Live Demo
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:examplemail@gmail.com">rhemamutethia@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/rhema-mutethia-430723209">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -20,469 +430,25 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Rhema Mutethia</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="My profile picture" style="border-radius: 2rem;"/>
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I am</p>
-        <h1 class="title">Rhema Mutethia</h1>
-        <p class="section__text__p2">Software Developer </p> 
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Rhema Mutethia - Resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/rhema-mutethia'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/rhema254'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            
-            <div class="details-container">
-              <div>
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-            </div>
-              <h3>Experience</h3>
-              <p>1+ years <br />Software Development</p>
-            </div>
-            
-            <div class="details-container">
-              <div>
-              <i class="fa-solid fa-certificate"></i>
-            </div>
-              <h3>Certifications</h3>
-              <span ><img src="assets/aws_badge.avif" alt=""  class="" width="10%" > Cloud Practitioner Essentials</span>
-            </div>  
-          
-            <div class="details-container">
-              <div>
-              <img
-                src="./assets/user-graduate-solid.svg"
-                alt="Education icon"
-                class="icon"
-              />
-            </div>
-              <h3>Education</h3>
-              <p>B.Sc. Computer Science<br />Kenyatta University <br/>  2020 - 2024</p>
-            </div>
-            
-            
-          </div>
-          <div class="text-container">
-            <p>
-            
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>BootStrap</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-             
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Jinja Tempates</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-             
-             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flask</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Rest API</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+    <p>Copyright &#169; 2024 Rhema Mutethia. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', adjustLogoSize);
+    window.addEventListener('resize', adjustLogoSize);
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/MusiciansConnect.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Musicians Connect</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/rhema254/_MusiciansConnect '"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://musiciansconnect-7f13a228269e.herokuapp.com'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+    function adjustLogoSize() {
+      const navbar = document.getElementById('desktop-nav');
+      const logoImg = document.querySelector('.logo img');
 
-          
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Waitlist With Mpesa</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Waitlist_with_MpesaExpress'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Waitlist_with_MpesaExpress'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ComingSoon.svg"
-                alt="Project "
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Harvest-Hub</h2>
-            <div class="btn-container">
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/rhema254/HarvestHub/tree/Rhema'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/rhema254/HarvestHub/tree/Rhema'"
-                >
-                  Live Demo
-                </button>
-              </div>
-              
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Codility_Readme.png"
-                alt="Project "
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Codility-Challenges</h2>
-            <div class="btn-container">
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/Codility-Challenges'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/Codility-Challenges'"
-                >
-                  Live Demo
-                </button>
-              </div>
-              
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Movie_Rec.png"
-                alt="Project "
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Movie Rev</h2>
-            <div class="btn-container">
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/Codility-Challenges'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/Codility-Challenges'"
-                >
-                  Live Demo
-                </button>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">rhemamutethia@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/rhema-mutethia-430723209">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Rhema Mutethia. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-    <script>
-      window.addEventListener('load', adjustLogoSize);
-      window.addEventListener('resize', adjustLogoSize);
-  
-      function adjustLogoSize() {
-        const navbar = document.getElementById('desktop-nav');
-        const logoImg = document.querySelector('.logo img');
-  
-        if (navbar && logoImg) {
-          const navbarHeight = navbar.clientHeight;
-          logoImg.style.maxHeight = `${navbarHeight}vh`;
-        }
+      if (navbar && logoImg) {
+        const navbarHeight = navbar.clientHeight;
+        logoImg.style.maxHeight = `${navbarHeight}vh`;
       }
-    </script>
-  
+    }
+  </script>
 
-  </body>
+
+</body>
+
 </html>
