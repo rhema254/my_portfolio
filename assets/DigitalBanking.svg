@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1b263b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00b4d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#48cae4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <rect x="50" y="150" width="700" height="300" rx="20" fill="#415a77" opacity="0.3"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="url(#accent2)" text-anchor="middle">Digital Banking System</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Microservices Banking Application</text>
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="18" fill="#64748b" text-anchor="middle">Spring Boot | Kafka | Eureka | JWT</text>
+</svg>
